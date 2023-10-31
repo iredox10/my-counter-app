@@ -7,8 +7,8 @@ export const SignupModel = () => {
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [repeatPassword, setRepeatPassword] = useState("");
   const [error, setError] = useState("");
+  const [repeatPassword, setRepeatPassword] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -23,6 +23,7 @@ export const SignupModel = () => {
     try {
       const res = await axios.post('http://localhost:3000/user/signup', {name,username,password})
       if(res.status !== 201){
+        localStorage.setItem("counterUser", JSON.stringify(res.data.user));
         setError(res.data)
       }
       console.log(res.data)
