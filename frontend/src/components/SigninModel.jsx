@@ -3,6 +3,7 @@ import { FormInput } from "./FormInput";
 import { Btn } from "./Btn";
 
 export const SigninModel = () => {
+  
   return (
     <div className="">
       <h1 className="text-center">sign up</h1>

@@ -8,14 +8,12 @@ import { SigninModel } from "./components/SigninModel";
 
 function App() {
 
-  
-
   const [counter, setCounter] = useState(0)
   const [showModel, setShowModel] = useState(false)
   const [showSignupModel, setShowSignupModel] = useState(true)
-  useEffect(() =>{
-    fetch('http://localhost:300/')
-  })
+  // useEffect(() =>{
+  //   fetch('http://localhost:300/')
+  // })
   return (
     <div className="m-5">
       <div className="border-2 p-2">
