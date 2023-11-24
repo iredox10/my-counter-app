@@ -23,12 +23,9 @@ export const SigninModel = () => {
       });
       setError('')
       localStorage.setItem("counterUser", JSON.stringify(res.data.user));
-      // if (res.status !== 200) {
-      //   setError(res.data);
-      // }
+      window.location.reload(false)
       console.log(res.data);
     } catch (err) {
-      // console.log(err)
       setError(err.response.data.message);
     }
   };

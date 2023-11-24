@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const Btn = ({text}) => {
+export const Btn = ({text, action}) => {
   return (
     <div className='flex justify-center '>
-      <button className='p-2 bg-gray-500' type='submit'>{text}</button>
+      <button className='px-6 py-2 bg-white text-green-600 shadow-lg' type='submit' onClick={action}>{text}</button>
     </div>
   );
 }

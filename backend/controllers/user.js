@@ -15,10 +15,14 @@ export const signup = async (req,res)=>{
             username: req.body.username,
             password: hashPwd
         })
-        const jwt = signJwt(user._id)
-        res.json({user,jwt})
+
+        // const jwt = signJwt(user._id)
+        res.status(201).json({user})
     } catch (err) {
-        res.json(err.message)
+        if(err.code === 11000){
+            res.json('username already exist')
+        }
+        res.status(404).json(err)
     }
 }
 

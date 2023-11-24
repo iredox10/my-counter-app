@@ -12,6 +12,11 @@ const counterSchema = new mongoose.Schema(
     },
     count: {
         type: Number,
+        default: 0
+    },
+    active:{
+      type: Boolean,
+      default: false
     }
   },
   { timestamps: true }
